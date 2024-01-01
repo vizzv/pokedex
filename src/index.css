@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: pokemon;
+  src: url(".\\src\\font\\PokemonSolidNormal-xyWR.ttf");
+}
+:root{
+  --color1: rgb(0, 231, 255);
+  --color2: rgb(255, 0, 231);
+}
+
+*{
+  border-radius: 5px;
+}
+.card{
+
+  border: 10px solid black;
+  letter-spacing: 20px;
+  border-radius: 10px;
+  
+}
+
+
+.card > *{
+  border-radius: 5px;
+
+}
+
+body{
+  background-color: #e2e2e2;
+}
+:root {
+  --mx: 50%;
+  --my: 50%;
+  --s: 1;
+  --o: 0;
+  --tx: 0px;
+  --ty: 0px;
+  --rx: 0deg;
+  --ry: 0deg;
+  --pos: 50% 50%;
+  --posx: 50%;
+  --posy: 50%;
+  --hyp: 0;
+}
+
+.card {
+  --radius: 4.55% / 3.5%;
+  z-index: calc(var(--s) * 100);
+  transform: translate3d(0, 0, 0.1px);
+  will-change: transform, visibility;
+  transform-style: preserve-3d;
+}
+
+.card.interacting {
+  z-index: calc(var(--s) * 120);
+}
+
+.card.active .card__translater,
+.card.active .card__rotator {
+  touch-action: none;
+}
+
+.card__translater,
+.card__rotator {
+  display: grid;
+  perspective: 600px;
+}
