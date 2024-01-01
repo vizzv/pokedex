@@ -140,7 +140,7 @@ useEffect(()=>{
     <div className='flex felx-row items-center justify-center'>
             <span className='font-bold m-5 text-6xl  border-2 border-[#222]  p-3 '>{pname.charAt(0).toUpperCase()+pname.slice(1)+" #"+pokedexId}</span>
     </div>
-    <div className='flex sm:flex-col xl:flex-row'>
+    <div className='flex flex-col min-w-full xl:flex-row'>
         <div className='image-area flex flex-row items-center p-5 m-5 justify-center min-w-[45vw] '>
         <Card  key={pname} className='holo-card'>
         <CardActionArea className=' min-w-[80vw] min-h-[50vh] xl:min-w-[50vw] xl:min-h-[50vh]  flex flex-col items-center justify-center m-0 p-0 ' >
